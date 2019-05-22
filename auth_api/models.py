@@ -20,7 +20,7 @@ class UserManager(BaseUserManager):
             cajero = kwargs['rol_cajero']
         if 'punto_venta' in kwargs:
             punto_venta = kwargs['punto_venta']
-        elif 'empresa' in kwargs:
+        if 'empresa' in kwargs:
             empresa = kwargs['empresa']
 
         user = self.model(
